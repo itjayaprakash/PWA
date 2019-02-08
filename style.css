@@ -42,7 +42,6 @@ body{
 .dynamic_page {
     background-color: #f1f1f1;
     margin-left: 240px;
-    transition: all 0.4s;
 }
 .sidebar {
     width: 240px;
