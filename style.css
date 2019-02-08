@@ -52,7 +52,6 @@ body{
     bottom: 0px;
     background-color: #3b424f;
     /* flex-shrink: 0; */
-    transition: all 0.4s;
 }
 .s_header {
     height: 200px;
@@ -100,7 +99,10 @@ body{
     transition: all 0.9s;
 }
 .s_body {
-    padding: 30px 0px 50px 0px;
+	padding: 0px 0px 50px 0px;
+	max-height: calc(100vh - 175px);
+	overflow-y: auto;
+	margin-top: 30px;
 }
 .logo {
     width: 130px;

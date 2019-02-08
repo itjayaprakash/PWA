@@ -55,7 +55,7 @@
 
             <div class="AppHeader">
                 <i class="material-icons" id="menu">menu</i>
-                <span class="app_title">Create Catalogue</span>
+                <span class="app_title">Webix List</span>
                 <div class="rt_profile">Jayaprakash</div>
             </div>
 
@@ -96,7 +96,7 @@
 				data:big_film_set
             });
             
-            $$('list1').resize();
+            
 
 			// webix.ui({
 			// 	container:"listB",
@@ -138,11 +138,21 @@
         
     <script>
         document.getElementById('menu').addEventListener('click',function(){
-                document.querySelector('.root').classList.toggle('drawer_hidden');
+               document.querySelector('.root').classList.toggle('drawer_hidden');
         })
         document.getElementById('mobile').addEventListener('click',function(){
-                document.querySelector('.root').classList.toggle('drawer_hidden');
+               document.querySelector('.root').classList.toggle('drawer_hidden');
         })
+		
+		var deleteLink = document.querySelectorAll('.sidebar ul li');
+		for (var i = 0; i < deleteLink.length; i++) {
+			deleteLink[i].addEventListener('click', function(event) {
+				if(window.innerWidth<768) {
+					document.querySelector('.root').classList.toggle('drawer_hidden');
+				}
+			});
+		}
+		
     </script>
 </body>
 
